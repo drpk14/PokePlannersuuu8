@@ -1,14 +1,14 @@
 {
-  "pokemons":[
+  "pokemons": [
     {
-      "id":001,
-      "name"="Bulbasaur",
-      "sprite"="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+      "id": 1,
+      "name": "Bulbasaur",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
     },
     {
-      "id"=002,
-      "name"="Ivysaur",
-      "sprite"="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
+      "id": 2,
+      "name": "Ivysaur",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
     }
   ]
 }
