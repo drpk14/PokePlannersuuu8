@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PokePlanner</string>
+    <string name="navigation_drawer_open">Abrir el menu de navegacion</string>
+    <string name="navigation_drawer_close">Cerrar el menu de navegacion</string>
+    <string name="nav_header_desc">Titulo del menu</string>
+    <string name="action_settings">Opciones</string>
+    <string name="menu_aboutus">Sobre Nosotros</string>
+    <string name="menu_teamplanner">Planificador de equipo</string>
+    <string name="menu_search">Buscar</string>
+    <string name="title_activity_team_viewer">Visor de Equipo</string>
+    <string name="first_fragment_label">Primer Fragment</string>
+    <string name="second_fragment_label">Segundo Fragment</string>
+    <string name="next">Siguiente</string>
+    <string name="previous">Anterior</string>
+    <string name="title_activity_update_team_name">Actualizar el nombre del equipo</string>
+    <string name="title_activity_add_team">Añadir equipo</string>
+    <string name="nameTextFieldHint">Nombre del equipo</string>
+    <string name="buttonSaveName">Guardar</string>
+</resources>

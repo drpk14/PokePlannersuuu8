@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_aboutus">
+
+    <fragment
+        android:id="@+id/nav_aboutus"
+        android:name="ramos.david.pokeplanner.ui.home.HomeFragment"
+        android:label="@string/menu_aboutus"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_teamplanner"
+        android:name="ramos.david.pokeplanner.ui.teamplanner.TeamPlannerFragment"
+        android:label="@string/menu_teamplanner"
+        tools:layout="@layout/fragment_teamplanner" />
+
+    <fragment
+        android:id="@+id/nav_search"
+        android:name="ramos.david.pokeplanner.ui.search.SearchFragment"
+        android:label="@string/menu_search"
+        tools:layout="@layout/fragment_search" />
+</navigation>

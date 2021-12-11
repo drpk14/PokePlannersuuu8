@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ramos.david.pokeplanner">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PokePlanner">
+        <activity
+            android:name=".ui.teamplanner.TeamViewer"
+            android:exported="true"
+            android:label="@string/title_activity_team_viewer"  />
+        <activity
+            android:name=".ui.teamplanner.AddTeam"
+            android:exported="true"
+            android:label = "@string/title_activity_add_team"/>
+        <activity
+            android:name=".ui.teamplanner.UpdateTeam"
+            android:exported="true"
+            android:label="@string/title_activity_update_team_name" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.PokePlanner.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+
+</manifest>
