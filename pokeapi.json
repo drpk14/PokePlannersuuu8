@@ -8,7 +8,7 @@
     {
       id="002",
       name="Ivysaur",
-      sprite="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
+      sprite="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
     }
   ]
 }
