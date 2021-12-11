@@ -3,7 +3,7 @@
     {
       id:"001",
       name="Bulbasaur",
-      sprite="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+      sprite="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
     },
     {
       id="002",
