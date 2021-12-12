@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ramos.david.pokeplanner">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,13 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PokePlanner">
         <activity
+            android:name=".ui.search.PokemonViewer"
+            android:exported="true" />
+        <activity
             android:name=".ui.teamplanner.TeamViewer"
             android:exported="true"
-            android:label="@string/title_activity_team_viewer"  />
+            android:label="@string/title_activity_team_viewer" />
         <activity
             android:name=".ui.teamplanner.AddTeam"
             android:exported="true"
-            android:label = "@string/title_activity_add_team"/>
+            android:label="@string/title_activity_add_team" />
         <activity
             android:name=".ui.teamplanner.UpdateTeam"
             android:exported="true"
@@ -33,6 +38,5 @@
             </intent-filter>
         </activity>
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

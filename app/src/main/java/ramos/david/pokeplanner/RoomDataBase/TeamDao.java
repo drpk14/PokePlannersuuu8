@@ -21,7 +21,7 @@ public interface TeamDao {
     void deleteAll();
 
     @Query("SELECT * from team_table ORDER BY id ASC")
-    LiveData<List<Team>> getAllWords();
+    LiveData<List<Team>> getAllTeams();
 
     @Delete
     void deleteTeam(Team team);

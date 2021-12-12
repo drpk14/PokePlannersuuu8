@@ -28,31 +28,43 @@ public class PokemonRepository {
     }
 
     Application application;
-    private static final String FISRT_REQUEST_URL = "https://pokeapi.co/api/v2/pokemon/";
+    private static final String FISRT_REQUEST_URL = "https://drpk14.github.io/PokePlanner/pokeapi.json";
 
     public LiveData<List<Pokemon>> getPokemons(){
 
         if (pokemons == null){
             pokemons= new MutableLiveData<>();
-            cargaUrls();
+            cargaPokemons();
         }
 
         return pokemons;
     }
+    public Pokemon buscarPokemon(int id){
+        Pokemon pokemonReturn = null;
 
-    private void cargaUrls() {
+        Iterator it = pokemons.getValue().iterator();
+        while(it.hasNext()){
+            Pokemon pokemon = (Pokemon) it.next();
+            if(pokemon.getId() == id){
+                pokemonReturn = pokemon;
+                break;
+            }
+        }
+        return pokemonReturn;
+    }
+
+    private void cargaPokemons() {
 
         Uri baseUri = Uri.parse(FISRT_REQUEST_URL);
         Uri.Builder uriBuilder = baseUri.buildUpon();
-        uriBuilder.appendQueryParameter("limit","151");
+        //uriBuilder.appendQueryParameter("limit","151");
 
         final RequestQueue requestQueue = Volley.newRequestQueue(application);
         StringRequest request = new StringRequest(Request.Method.GET, uriBuilder.build().toString(),
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                       List<String> urls = JsonReader.obtenerUrls(response);
-                       cargarPokemon(urls);
+                       pokemons.postValue(JsonReader.obtenerPokemons(response));
                     }
                 },
                 new Response.ErrorListener() {
@@ -63,34 +75,5 @@ public class PokemonRepository {
                     }
                 });
         requestQueue.add(request);
-    }
-
-    private void cargarPokemon(List<String> urls){
-
-        Iterator it = urls.iterator();
-        List<Pokemon> pokemonsProvisional = new ArrayList();
-        while(it.hasNext()) {
-            String url = (String) it.next();
-            Uri baseUri = Uri.parse(url);
-            Uri.Builder uriBuilder = baseUri.buildUpon();
-            final RequestQueue requestQueue = Volley.newRequestQueue(application);
-            StringRequest request = new StringRequest(Request.Method.GET, uriBuilder.build().toString(),
-                    new Response.Listener<String>() {
-                        @Override
-                        public void onResponse(String response) {
-                            Pokemon pokemon = JsonReader.obtenerPokemon(response);
-                            pokemonsProvisional.add(pokemon);
-                        }
-                    },
-                    new Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
-
-                            Log.e("PokemonRepository", "Error en la carga de volley"+ error.getMessage());
-                        }
-                    });
-            requestQueue.add(request);
-        }
-        pokemons.postValue(pokemonsProvisional);
     }
 }

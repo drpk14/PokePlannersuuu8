@@ -19,7 +19,7 @@
             android:layout_marginBottom="0sp">
 
             <ImageView
-                android:id="@+id/spriteImageView"
+                android:id="@+id/spriteListImageView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
@@ -30,7 +30,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/idTextField"
+                    android:id="@+id/idListTextField"
                     android:layout_width="60dp"
                     android:layout_height="15dp"
                     android:layout_marginStart="15dp"
@@ -39,12 +39,12 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/nameTextField"
+                    android:id="@+id/nameListTextField"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/idTextField"
+                    app:layout_constraintStart_toEndOf="@+id/idListTextField"
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>

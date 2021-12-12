@@ -8,6 +8,8 @@ import androidx.lifecycle.LiveData;
 
 import java.util.List;
 
+import ramos.david.pokeplanner.RoomDataBase.Team;
+
 
 public class PokemonViewModel extends AndroidViewModel {
     PokemonRepository repository;
@@ -20,4 +22,5 @@ public class PokemonViewModel extends AndroidViewModel {
     public LiveData<List<Pokemon>> getPokemons(){
             return repository.getPokemons();
         }
+    public Pokemon searchPokemon(int id){return repository.buscarPokemon(id);}
 }

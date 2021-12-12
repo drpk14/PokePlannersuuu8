@@ -1,13 +1,13 @@
 package ramos.david.pokeplanner.ui.search;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -19,7 +19,6 @@ import java.util.List;
 
 import ramos.david.pokeplanner.API.Pokemon;
 import ramos.david.pokeplanner.R;
-import ramos.david.pokeplanner.RoomDataBase.Team;
 
 
 public class PokemonSearchAdapter extends RecyclerView.Adapter<PokemonSearchAdapter.PokemonViewHolder>{
@@ -72,9 +71,9 @@ public class PokemonSearchAdapter extends RecyclerView.Adapter<PokemonSearchAdap
 
         public PokemonViewHolder(@NonNull View itemView) {
             super(itemView);
-            idTextView = itemView.findViewById(R.id.idTextField);
-            nameTextView = itemView.findViewById(R.id.nameTextField);
-            imageView = itemView.findViewById(R.id.spriteImageView);
+            idTextView = itemView.findViewById(R.id.idListTextField);
+            nameTextView = itemView.findViewById(R.id.nameListTextField);
+            imageView = itemView.findViewById(R.id.spriteListImageView);
             itemView.setOnClickListener(this);
         }
 
@@ -82,7 +81,9 @@ public class PokemonSearchAdapter extends RecyclerView.Adapter<PokemonSearchAdap
         public void onClick(View v) {
             int position = this.getLayoutPosition();
             Pokemon pokemon = getPokemonAtPosition(position);
-            Toast.makeText(context, pokemon.getName(), Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(context, PokemonViewer.class);
+            intent.putExtra("idPokemon",pokemon.getId());
+            context.startActivity(intent);
         }
     }
 }

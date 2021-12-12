@@ -11,16 +11,16 @@ import java.util.concurrent.ExecutionException;
 public class TeamRepository {
 
     private TeamDao mTeamDao;
-    private LiveData<List<Team>> mAllWords;
+    private LiveData<List<Team>> mAllTeams;
 
     public TeamRepository(Application application) {
         TeamRoomDatabase db = TeamRoomDatabase.getDatabase(application);
         mTeamDao = db.wordDao();
-        mAllWords = mTeamDao.getAllWords();
+        mAllTeams = mTeamDao.getAllTeams();
     }
 
     public LiveData<List<Team>> getAllTeams() {
-        return mAllWords;
+        return mAllTeams;
     }
 
     public void insert (Team team) {new insertAsyncTask(mTeamDao).execute(team);}
