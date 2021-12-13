@@ -31,7 +31,7 @@ public class PokemonSearchAdapter extends RecyclerView.Adapter<PokemonSearchAdap
         mInflater = LayoutInflater.from(context);
         pokemons = new ArrayList();
     }
-
+//
     @NonNull
     @Override
     public PokemonSearchAdapter.PokemonViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

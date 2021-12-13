@@ -56,7 +56,7 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.TeamViewHolder
         this.teams = teams;
         notifyDataSetChanged();
     }
-
+//
     public Team getTeamAtPosition (int position) {
         return teams.get(position);
     }

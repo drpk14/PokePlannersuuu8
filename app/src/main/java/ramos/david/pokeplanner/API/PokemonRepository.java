@@ -6,6 +6,7 @@ import android.util.Log;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.Observer;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -32,25 +33,12 @@ public class PokemonRepository {
 
     public LiveData<List<Pokemon>> getPokemons(){
 
-        if (pokemons == null){
+        if(pokemons == null) {
             pokemons= new MutableLiveData<>();
             cargaPokemons();
         }
 
         return pokemons;
-    }
-    public Pokemon buscarPokemon(int id){
-        Pokemon pokemonReturn = null;
-
-        Iterator it = pokemons.getValue().iterator();
-        while(it.hasNext()){
-            Pokemon pokemon = (Pokemon) it.next();
-            if(pokemon.getId() == id){
-                pokemonReturn = pokemon;
-                break;
-            }
-        }
-        return pokemonReturn;
     }
 
     private void cargaPokemons() {

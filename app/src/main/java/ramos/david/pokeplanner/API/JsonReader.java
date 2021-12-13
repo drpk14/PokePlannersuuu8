@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class JsonReader {
-
+//
 
     public static List<Pokemon> obtenerPokemons(String pokemonJSON) {
         if (TextUtils.isEmpty(pokemonJSON)) {

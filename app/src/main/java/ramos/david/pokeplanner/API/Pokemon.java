@@ -3,7 +3,7 @@ package ramos.david.pokeplanner.API;
 import android.media.Image;
 
 import java.util.HashMap;
-
+//
 public class Pokemon {
     private int id;
     private String name;

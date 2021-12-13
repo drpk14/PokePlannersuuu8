@@ -21,7 +21,7 @@ import ramos.david.pokeplanner.databinding.FragmentSearchBinding;
 
 
 public class SearchFragment extends Fragment {
-
+//
     private FragmentSearchBinding binding;
     private PokemonViewModel pokemonViewModel;
 

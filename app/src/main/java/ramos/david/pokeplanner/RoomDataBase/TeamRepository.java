@@ -18,7 +18,7 @@ public class TeamRepository {
         mTeamDao = db.wordDao();
         mAllTeams = mTeamDao.getAllTeams();
     }
-
+//
     public LiveData<List<Team>> getAllTeams() {
         return mAllTeams;
     }

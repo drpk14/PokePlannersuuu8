@@ -41,7 +41,7 @@ public class TeamPlannerFragment extends Fragment {
         binding = FragmentTeamplannerBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-
+//
 
 
         RecyclerView recyclerView = binding.teamRecyclerView;

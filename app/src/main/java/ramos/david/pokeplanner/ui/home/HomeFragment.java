@@ -14,7 +14,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import ramos.david.pokeplanner.R;
 import ramos.david.pokeplanner.databinding.FragmentHomeBinding;
-
+//
 public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
